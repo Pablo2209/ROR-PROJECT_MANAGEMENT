@@ -1,4 +1,6 @@
 class ProjectsController < ApplicationController
+  #Usar la autenticacion de Devise
+  before_action :authenticate_user!
   before_action :set_project, only: %i[ show edit update destroy ]
 
   # GET /projects or /projects.json
