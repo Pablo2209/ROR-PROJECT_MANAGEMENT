@@ -10,6 +10,11 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
+//Require para gema bootstrap jquery, popper, bootstrap y requerir el archivo de javascritp
+//= require jquery
+//= require popper
+//= require bootstrap
+//= require scripts.js
 //= require rails-ujs
 //= require turbolinks
 //= require_tree .

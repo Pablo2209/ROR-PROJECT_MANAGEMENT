@@ -61,3 +61,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #MIS GEMAS
 #Desvise para administracion de usuarios
 gem 'devise'
+
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'font_awesome5_rails'
