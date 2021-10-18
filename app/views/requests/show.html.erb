@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @request.name %>
+</p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @request.type %>
+</p>
+
+<p>
+  <strong>D day:</strong>
+  <%= @request.d_day %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @request.city %>
+</p>
+
+<p>
+  <strong>N day:</strong>
+  <%= @request.n_day %>
+</p>
+
+<p>
+  <strong>Viatic:</strong>
+  <%= @request.viatic %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @request.state %>
+</p>
+
+<%= link_to 'Edit', edit_request_path(@request) %> |
+<%= link_to 'Back', requests_path %>

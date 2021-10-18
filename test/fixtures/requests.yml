@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  type: 
+  d_day: 2021-10-18
+  city: MyString
+  n_day: 1
+  viatic: 1.5
+  state: 
+
+two:
+  name: MyString
+  type: 
+  d_day: 2021-10-18
+  city: MyString
+  n_day: 1
+  viatic: 1.5
+  state: 

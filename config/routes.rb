@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :banks
+  resources :requests
   resources :technicians
   resources :engineers
   resources :projects
