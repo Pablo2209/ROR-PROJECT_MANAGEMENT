@@ -7,7 +7,7 @@ class CreateRequests < ActiveRecord::Migration[5.2]
       t.string :city
       t.integer :n_day
       t.float :viatic
-      t.bolean :state
+      t.boolean :state
 
       t.timestamps
     end
