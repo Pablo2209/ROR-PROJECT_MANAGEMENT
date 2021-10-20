@@ -232,7 +232,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
-  font-awesome-sass
+  font-awesome-sass (~> 5.15, >= 5.15.1)
   font_awesome5_rails
   jbuilder (~> 2.5)
   jquery-rails
