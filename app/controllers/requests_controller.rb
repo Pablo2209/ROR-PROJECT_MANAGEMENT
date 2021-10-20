@@ -13,10 +13,17 @@ class RequestsController < ApplicationController
   # GET /requests/new
   def new
     @request = Request.new
+    #Relacion con la tabla N
+    @projects = Project.all
+
   end
 
   # GET /requests/1/edit
   def edit
+    #Relacion con la tabla N
+    @projects = Project.all
+    #Relacion con la tabla INTERMEDIA
+    @request.projects_requests.build
   end
 
   # POST /requests or /requests.json
@@ -64,6 +71,6 @@ class RequestsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def request_params
-      params.require(:request).permit(:name, :type, :d_day, :city, :n_day, :viatic, :state)
+      params.require(:request).permit(:name, :type, :d_day, :city, :n_day, :viatic, :state, {projects_requests_attributes: [:id, :project_id]})
     end
 end
