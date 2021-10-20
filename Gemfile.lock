@@ -89,6 +89,8 @@ GEM
     erubi (1.10.0)
     execjs (2.8.1)
     ffi (1.15.4)
+    font-awesome-sass (5.15.1)
+      sassc (>= 1.11)
     font_awesome5_rails (1.5.0)
       nokogiri (>= 1.11.3)
       railties (>= 4.2)
@@ -178,6 +180,8 @@ GEM
       sprockets (>= 2.8, < 4.0)
       sprockets-rails (>= 2.0, < 4.0)
       tilt (>= 1.1, < 3)
+    sassc (2.4.0)
+      ffi (~> 1.9)
     selenium-webdriver (3.142.7)
       childprocess (>= 0.5, < 4.0)
       rubyzip (>= 1.2.2)
@@ -228,6 +232,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  font-awesome-sass
   font_awesome5_rails
   jbuilder (~> 2.5)
   jquery-rails
