@@ -65,3 +65,6 @@ gem 'devise'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
+gem 'omniauth-github'
+gem 'omniauth-facebook'
+gem 'omniauth-google'
