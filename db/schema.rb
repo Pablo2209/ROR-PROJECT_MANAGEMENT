@@ -10,12 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_25_234148) do
+ActiveRecord::Schema.define(version: 2021_11_02_190856) do
 
   create_table "banks", force: :cascade do |t|
     t.string "name"
     t.string "acc_type"
     t.integer "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "charges", force: :cascade do |t|
+    t.string "uid", limit: 50
+    t.integer "status", default: 0
+    t.integer "payment_method", default: 0
+    t.decimal "amount", default: "0.0"
+    t.text "error_message"
+    t.json "response_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
