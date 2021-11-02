@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :technicians
   resources :engineers
   resources :projects
-
+  resources :charges, only:[:index, :new, :create]
   
   root "home#index"
   devise_for :users, controllers: { omniauth_callbacks: "users/omniauth_callbacks"}
