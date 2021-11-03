@@ -1,6 +1,18 @@
-<h1>Editing Engineer</h1>
 
-<%= render 'form', engineer: @engineer %>
 
-<%= link_to 'Show', @engineer %> |
-<%= link_to 'Back', engineers_path %>
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <%= render 'shared/side' %>
+    <%= render 'shared/nav' %>
+
+    <h1>Editing Engineer</h1>
+
+    <%= render 'form', engineer: @engineer %>
+
+    <%= link_to 'Show', @engineer %> |
+    <%= link_to 'Back', engineers_path %>
+
+
+    
+    <%= render 'shared/foo' %>
+</div>

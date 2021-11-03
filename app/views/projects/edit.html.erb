@@ -1,6 +1,17 @@
-<h1>Editing Project</h1>
 
-<%= render 'form', project: @project %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <%= render 'shared/side' %>
+    <%= render 'shared/nav' %>
+
+    <h1>Editing Project</h1>
+
+    <%= render 'form', project: @project %>
+
+    <%= link_to 'Show', @project %> |
+    <%= link_to 'Back', projects_path %>
+    
+    <%= render 'shared/foo' %>
+</div>
+

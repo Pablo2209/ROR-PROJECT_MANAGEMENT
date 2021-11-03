@@ -1,6 +1,18 @@
-<h1>Editing Request</h1>
 
-<%= render 'form', request: @request %>
+<!-- Page Wrapper -->
+<div id="wrapper">
+    <%= render 'shared/side' %>
+    <%= render 'shared/nav' %>
 
-<%= link_to 'Show', @request %> |
-<%= link_to 'Back', requests_path %>
+    <h1>Editing Request</h1>
+
+    <%= render 'form', request: @request %>
+    
+    <%= link_to 'Show', @request %> |
+    <%= link_to 'Back', requests_path %>
+    
+
+
+
+    <%= render 'shared/foo' %>
+</div>
