@@ -1,39 +1,55 @@
-<div class="charges pt-4">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <%= link_to "Nuevo cobro", new_charge_path, class: "btn btn-link" %>
-
-        <table class="table mt-3">
-          <thead>
-            <tr>
-              <th>Fecha</th>
-              <th>Referencia</th>
-              <th>Valor</th>
-              <th>Estado</th>
-              <th>Método de pago</th>
-            </tr>
-          </thead>
-          <tbody>
-            <% @charges.each do |charge| %>
-              <tr>
-                <td><%= charge.created_at %></td>
-                <td><%= charge.uid %></td>
-                <td><%= charge.amount %></td>
-                <td>
-                  <%= charge.status %>
-                  <% if charge.error_message %>
-                    <small style="display: block;"><%= charge.error_message %></small>
-                  <% end %>
-                </td>
-                <td><%= charge.payment_method %></td>
-              </tr>
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">1 USER!!</h5>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. FOR $10.000 CLP</p>
+            <%= form_for @charge do |f| %>
+              <div class="form-group">
+                <%= f.label :amount%>
+                <%= f.text_field :amount, class: "form-control", value:"10000"%>
+              </div>
+              <div>
+                <%= f.submit "Ir a pagar", class: "btn btn-primary" %>
+              </div>
             <% end %>
-          </tbody>
-        </table>
-
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">5 USERS!!</h5>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. FOR $40.000 CLP</p>
+            <%= form_for @charge do |f| %>
+              <div class="form-group">
+                <%= f.label :amount%>
+                <%= f.text_field :amount, class: "form-control", value:"40000"%>
+              </div>
+              <div>
+                <%= f.submit "Ir a pagar", class: "btn btn-primary" %>
+              </div>
+           <% end %>
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">10 USERS!!</h5>
+          <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. FOR $70.000 CLP</p>
+          <%= form_for @charge do |f| %>
+            <div class="form-group">
+              <%= f.label :amount%>
+              <%= f.text_field :amount, class: "form-control", value:"70000"%>
+            </div>
+            <div>
+              <%= f.submit "Ir a pagar", class: "btn btn-primary" %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>
-
 </div>

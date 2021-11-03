@@ -4,7 +4,7 @@ class PayuController < ApplicationController
     def result
         @charge = Charge.where(uid: params[:referenceCode]).take
         
-        if charge.nil?
+        if @charge.nil?
             @error = "No se encontro la informacion del pago"
         else
             if params[:signature] != signature(@charge, params[:transactionState])
@@ -16,7 +16,7 @@ class PayuController < ApplicationController
     def confirmation
         charge = Charge.where(uid: params[:reference_sale]).take
     
-        if charge.nil?
+        if @charge.nil?
             head :unprocessable_entity
             return
         end
@@ -31,7 +31,7 @@ class PayuController < ApplicationController
 
     private
 
-    def signature(charge)
+    def signature(charge, state)
         msg = "#{ENV["PAYU_API_KEY"]}~#{ENV["PAYU_MERCHANT_ID"]}~#{charge.uid}~#{charge.amount}~COP~#{state}"
         Digest::MD5.hexdigest(msg)
     end
