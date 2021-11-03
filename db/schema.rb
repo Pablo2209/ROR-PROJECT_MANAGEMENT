@@ -56,11 +56,11 @@ ActiveRecord::Schema.define(version: 2021_11_02_190856) do
 
   create_table "projects_requests", force: :cascade do |t|
     t.integer "project_id"
-    t.integer "ingredient_id"
+    t.integer "request_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["ingredient_id"], name: "index_projects_requests_on_ingredient_id"
     t.index ["project_id"], name: "index_projects_requests_on_project_id"
+    t.index ["request_id"], name: "index_projects_requests_on_request_id"
   end
 
   create_table "requests", force: :cascade do |t|
