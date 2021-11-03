@@ -1,3 +1,4 @@
+<br>
 <div class="container">
   <div class="row">
     <div class="col-sm-4">
@@ -11,7 +12,7 @@
                 <%= f.text_field :amount, class: "form-control", value:"10000"%>
               </div>
               <div>
-                <%= f.submit "Ir a pagar", class: "btn btn-primary" %>
+                <%= f.submit "PAY", class: "btn btn-primary" %>
               </div>
             <% end %>
         </div>
@@ -28,7 +29,7 @@
                 <%= f.text_field :amount, class: "form-control", value:"40000"%>
               </div>
               <div>
-                <%= f.submit "Ir a pagar", class: "btn btn-primary" %>
+                <%= f.submit "PAY", class: "btn btn-primary" %>
               </div>
            <% end %>
         </div>
@@ -45,11 +46,17 @@
               <%= f.text_field :amount, class: "form-control", value:"70000"%>
             </div>
             <div>
-              <%= f.submit "Ir a pagar", class: "btn btn-primary" %>
+              <%= f.submit "PAY", class: "btn btn-primary" %>
             </div>
           <% end %>
         </div>
       </div>
     </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <%= link_to 'BACK', root_path, class:"btn btn-primary btn-xl "%>
   </div>
 </div>
