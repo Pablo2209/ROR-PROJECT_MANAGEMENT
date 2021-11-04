@@ -19,7 +19,7 @@ class RequestsController < ApplicationController
       respond_to do |format|
         format.html
         format.json
-        format.pdf {render template:'requests/reposw', pdf:'Report'}
+        format.pdf {render template:'requests/report', pdf:'Report'}
       end
   end
 
