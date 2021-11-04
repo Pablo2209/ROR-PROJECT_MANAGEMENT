@@ -11,6 +11,8 @@
 // about supported directives.
 //
 //Require para gema bootstrap jquery, popper, bootstrap y requerir el archivo de javascritp
+//= require jquery3
+//= require cocoon
 //= require jquery
 //= require popper
 //= require bootstrap

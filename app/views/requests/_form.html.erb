@@ -10,15 +10,13 @@
       </ul>
     </div>
   <% end %>
-  <!-- #Muestra en el formulario de people los guesses disponibles -->
+ 
 
 
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name %>
   </div>
-
-
 
   <div class="field">
     <%= form.label :d_day %>
@@ -40,9 +38,10 @@
     <%= form.text_field :viatic %>
   </div>
 
-  <div class="field">
-    <%= form.label :state %>
-    <%= form.text_field :state %>
+  <div class="field" id="projects_requests">
+    <%= form.fields_for :projects_requests do |ff| %>
+      <%= render 'projects_request_fields', f: ff %>
+    <% end %>
   </div>
 
   <div class="actions">

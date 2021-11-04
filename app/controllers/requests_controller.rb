@@ -15,6 +15,8 @@ class RequestsController < ApplicationController
     @request = Request.new
     #Relacion con la tabla N
     @projects = Project.all
+    #Relacion con la tabla INTERMEDIA
+    @request.projects_requests.build
 
   end
 

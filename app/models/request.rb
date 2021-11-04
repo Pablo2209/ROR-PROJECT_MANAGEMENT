@@ -6,5 +6,5 @@ class Request < ApplicationRecord
     has_many :projects, through: :projects_requests
 
     /Para disponer del formulario de ingredient y la tabla intermedia/
-    accepts_nested_attributes_for :projects, :projects_requests, reject_if: :all_blanck, allow_destroy: true
+    accepts_nested_attributes_for :projects, :projects_requests, allow_destroy: true
 end

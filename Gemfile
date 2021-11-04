@@ -71,3 +71,6 @@ gem 'omniauth-google'
 gem 'annotate', '~> 3.1', '>= 3.1.1'
 #Para guardar las llaves del metodo de pago
 gem 'figaro', '~> 1.2'
+
+#Cocoon
+gem 'cocoon'

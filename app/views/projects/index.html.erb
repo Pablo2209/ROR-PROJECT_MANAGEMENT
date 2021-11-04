@@ -345,32 +345,33 @@
 
               <h1>Projects</h1>
               
-              <table>
+              <table class="table">
                 <thead>
-                  <tr>
-                    <th>Name</th>
-                    <th>Requests</th>
-                    <th colspan="3"></th>
-                  </tr>
-                </thead>
-              
-                <tbody>
-                  <% @projects.each do |project| %>
                     <tr>
-                      <td><%= project.name %></td>
-                      <td><%= link_to 'Show', requests_path %></td>
-                      <td><%= link_to 'Edit', edit_project_path(project) %></td>
-                      <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                    <th scope="col">Name</th>
+                    <th scope="col">Request</th>
                     </tr>
-                  <% end %>
+                </thead>
+                <tbody>
+                    <% @projects.each do |project| %>
+                        <tr>
+                        <td><%= project.name %></td>
+                        <td><%= link_to 'Show', requests_path %></td>
+                        <td><%= link_to 'Edit', edit_project_path(project) %></td>
+                        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        </tr>
+                    <% end %>
                 </tbody>
               </table>
-              
               <br>
-              
-              <%= link_to 'New Project', new_project_path %>
-                      
+              <div class="row gx-4 gx-lg-5 justify-content-center mb-5">
+                <div class="col-lg-4">
+                     <%= link_to 'New Project', new_project_path, class:"btn btn-primary" %>
+                     <%= link_to 'New Request', new_request_path, class:"btn btn-primary" %>
+                </div>
+              </div>
 
+              
                   <!-- Earnings (Monthly) Card Example -->
                   <div class="col-xl-3 col-md-6 mb-4">
                       <div class="card border-left-primary shadow h-100 py-2">
