@@ -14,9 +14,7 @@
 
     <!-- Nav Item - Dashboard -->
     <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-            <i class="fas fa-fw fa-tachometer-alt"></i>
-            <span>Dashboard</span></a>
+        <a > <%= link_to "Dashboard", projects_path, class:"nav-link fas fa-fw fa-tachometer-alt"%></a>
     </li>
 
     <!-- Divider -->
@@ -79,14 +77,10 @@
         </a>
         <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Login Screens:</h6>
-                <a class="collapse-item" href="login.html">Login</a>
-                <a class="collapse-item" href="register.html">Register</a>
-                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                <%= link_to 'Projects', projects_path, class:"collapse-item" %>
+                <%= link_to 'Requests', requests_path, class:"collapse-item" %>
+                <%= link_to 'Enginners', engineers_path, class:"collapse-item" %>
                 <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Other Pages:</h6>
-                <a class="collapse-item" href="404.html">404 Page</a>
-                <a class="collapse-item" href="blank.html">Blank Page</a>
             </div>
         </div>
     </li>
@@ -117,7 +111,7 @@
     <div class="sidebar-card d-none d-lg-flex">
         <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
         <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-        <%= link_to 'Upgrade to Pro!', charges_path, class:"btn btn-success btn-sm" %>
+        <%= link_to 'UPDATE!!', charges_path, class:"btn btn-success btn-sm"%>
     </div>
 
 </ul>
