@@ -15,6 +15,12 @@ class RequestsController < ApplicationController
 
   # GET /requests/1 or /requests/1.json
   def show
+      #Generar PDF
+      respond_to do |format|
+        format.html
+        format.json
+        format.pdf {render template:'requests/reposw', pdf:'Report'}
+      end
   end
 
   # GET /requests/new

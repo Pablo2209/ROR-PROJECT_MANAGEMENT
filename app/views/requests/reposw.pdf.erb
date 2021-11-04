@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PM</title>
+  </head>
+
+  <body >
+  <h1><%= @request.name %></h1>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Date</th>
+        <th scope="col">City</th>
+        <th scope="col">Days</th>
+        <th scope="col">Viatics</th>
+        <th scope="col">Project</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td><%= @request.name %></td>
+          <td><%= @request.d_day %></td>
+          <td><%= @request.city %></td>
+          <td><%= @request.n_day %></td>
+          <td><%= @request.viatic %></td>
+          <td><%= @request.projects.map(&:name).join(',') %></td>
+        </tr>
+    </tbody>
+  </table>
+  </body>
+</html>
