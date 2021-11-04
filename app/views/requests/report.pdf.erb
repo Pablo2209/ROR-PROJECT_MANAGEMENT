@@ -5,6 +5,31 @@
   </head>
 
   <body >
-    <h1>hola mundo</h1>
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Date</th>
+            <th scope="col">City</th>
+            <th scope="col">Days</th>
+            <th scope="col">Viatics</th>
+            <th scope="col">Project</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @requests.each do |request| %>
+            <tr>
+              <td><%= request.name %></td>
+              <td><%= request.d_day %></td>
+              <td><%= request.city %></td>
+              <td><%= request.n_day %></td>
+              <td><%= request.viatic %></td>
+              <td><%= request.projects.map(&:name).join(',') %></td>
+              <td><%= link_to 'Edit', edit_request_path(request) %></td>
+              <td><%= link_to 'Destroy', request, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
   </body>
 </html>
