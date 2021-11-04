@@ -74,3 +74,7 @@ gem 'figaro', '~> 1.2'
 
 #Cocoon
 gem 'cocoon'
+
+#Generar PDF
+gem 'wicked_pdf'
+gem 'wkhtmltopdf-binary', '~> 0.12.6.5'
