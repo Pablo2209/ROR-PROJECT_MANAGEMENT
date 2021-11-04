@@ -6,6 +6,12 @@ class ProjectsController < ApplicationController
   # GET /projects or /projects.json
   def index
     @projects = Project.all
+    #Generar PDF
+    respond_to do |format|
+      format.html
+      format.json
+      format.pdf {render template:'projects/repopr', pdf:'Report'}
+    end
   end
 
   # GET /projects/1 or /projects/1.json

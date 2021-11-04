@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PM</title>
+  </head>
+
+  <body >
+  <table class="table">
+  <thead>
+      <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Request</th>
+      </tr>
+  </thead>
+  <tbody>
+      <% @projects.each do |project| %>
+          <tr>
+          <td><%= project.name %></td>
+          </tr>
+      <% end %>
+  </tbody>
+</table>
+  </body>
+</html>
