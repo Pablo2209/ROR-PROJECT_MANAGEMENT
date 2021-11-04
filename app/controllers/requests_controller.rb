@@ -4,23 +4,18 @@ class RequestsController < ApplicationController
   # GET /requests or /requests.json
   def index
     @requests = Request.all
-
     #Generar PDF
     respond_to do |format|
       format.html
       format.json
       format.pdf {render template:'requests/report', pdf:'Report'}
     end
+
   end
 
   # GET /requests/1 or /requests/1.json
   def show
-      #Generar PDF
-      respond_to do |format|
-        format.html
-        format.json
-        format.pdf {render template:'requests/report', pdf:'Report'}
-      end
+
   end
 
   # GET /requests/new
