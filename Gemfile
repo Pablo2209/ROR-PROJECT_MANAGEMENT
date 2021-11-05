@@ -65,9 +65,10 @@ gem 'devise'
 
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-gem 'omniauth-github'
+gem 'omniauth-github', github: 'omniauth/omniauth-github', branch: 'master'
+gem "omniauth-rails_csrf_protection"
+
 gem 'omniauth-facebook'
-gem 'omniauth-google'
 gem 'annotate', '~> 3.1', '>= 3.1.1'
 #Para guardar las llaves del metodo de pago
 gem 'figaro', '~> 1.2'
